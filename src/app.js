@@ -17,10 +17,10 @@ try {
         feedbackMessageText = isEmpty(gamerTagValue)
             ? "Gamer tag cannot be empty"
             : "Gamer tag is valid";
-        if (feedbackMessageText.length !== 0){
+        if (feedbackMessageText.length !== 0) {
             feedbackMessageText = checkGamerTag(gamerTagValue)
-            ? "Gamer tag needs to be longer than 7 characters, contain a special char and a number"
-            : "Gamer tag is valid";
+                ? "Gamer tag needs to be longer than 7 characters, contain a special char and a number"
+                : "Gamer tag is valid";
         }
         feedbackMessage.textContent = feedbackMessageText;
     });

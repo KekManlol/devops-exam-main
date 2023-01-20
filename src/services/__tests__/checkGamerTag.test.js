@@ -1,13 +1,13 @@
-const { checkGamerTag } = require('../validations');
+const { checkGamerTag } = require("../validations");
 
 describe("checkGamerTag test validation", () => {
-    it("should return false when entering nothing",() => {
+    it("should return false when entering nothing", () => {
         expect(checkGamerTag("")).toBe(false);
     });
     it("should return false when entering a tag shorter than 8 chars", () => {
         expect(checkGamerTag("JeanKe!")).toBe(false);
     });
-    it("should return false when entering a tag that doesn\'t contain a special char", () => {
+    it("should return false when entering a tag that doesn't contain a special char", () => {
         expect(checkGamerTag("JeanKevin")).toBe(false);
     });
     it("should return false when entering a tag that only contains a special char", () => {
