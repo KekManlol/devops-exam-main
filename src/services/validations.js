@@ -3,7 +3,7 @@
 const isEmpty = (label) => !label || label.length === 0;
 
 const checkGamerTag = (tag) => {
-    if (tag==="") return false;
+    if (tag=="" || tag.length < 8) return false;
     return true;
 };
 
