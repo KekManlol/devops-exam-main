@@ -3,7 +3,8 @@
 const isEmpty = (label) => !label || label.length === 0;
 
 const checkGamerTag = (tag) => {
-    if (tag=="" || tag.length < 8) return false;
+
+    if (tag=="" || tag.length < 8 || !tag.includes('@')) return false;
     return true;
 };
 

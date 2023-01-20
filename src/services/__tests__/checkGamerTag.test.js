@@ -5,6 +5,12 @@ describe("checkGamerTag test validation", () => {
         expect(checkGamerTag("")).toBe(false);
     });
     it("should return false when entering a tag shorter than 8 chars", () => {
-        expect(checkGamerTag("JeanKev")).toBe(false);
+        expect(checkGamerTag("JeanKe!")).toBe(false);
+    });
+    it("should return false when entering a tag that doesn\'t contain a special char", () => {
+        expect(checkGamerTag("JeanKevin")).toBe(false);
+    });
+    it("should return true when entering a tag that contain a special char", () => {
+        expect(checkGamerTag("JeanKevin@")).toBe(true);
     });
 });
