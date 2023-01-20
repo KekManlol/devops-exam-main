@@ -10,7 +10,10 @@ describe("checkGamerTag test validation", () => {
     it("should return false when entering a tag that doesn\'t contain a special char", () => {
         expect(checkGamerTag("JeanKevin")).toBe(false);
     });
-    it("should return true when entering a tag that contain a special char", () => {
-        expect(checkGamerTag("JeanKevin@")).toBe(true);
+    it("should return false when entering a tag that only contains a special char", () => {
+        expect(checkGamerTag("JeanKevin@")).toBe(false);
+    });
+    it("should return true when entering a tag that contains a special char", () => {
+        expect(checkGamerTag("JeanKevin@1")).toBe(true);
     });
 });
